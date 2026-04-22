@@ -10,7 +10,7 @@ const getAll = async () => {
 
 const getById = async (id) => {
   const [rows] = await pool.query(
-    'SELECT * FROM personalizacio WHERE idpersonalizacio = ?', 
+    'SELECT * FROM personalizacio WHERE id = ?', 
     [id]
   );
   return rows;
@@ -18,11 +18,10 @@ const getById = async (id) => {
 
 const Create = async (sabor, relleno, tamano, cobertura, decoracion) => {
   const [result] = await pool.query(
-    'INSERT INTO personalizacio (sabor, rel, tamano, cober, decor) VALUES (?, ?, ?, ?, ?)',
+    'INSERT INTO personalizacio (sabor, relleno, tamano, cobertura, decoracion) VALUES (?, ?, ?, ?, ?)',
     [sabor, relleno, tamano, cobertura, decoracion]
   );
   return { id: result.insertId, sabor, relleno, tamano, cobertura, decoracion };
 };
-
 
 module.exports = {getAll,getById, Create};

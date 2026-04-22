@@ -21,4 +21,4 @@ const usuarioModel = {
   },
 };
 
-module.exports = {...usuarioModel ,  getAll };
+module.exports = {usuarioModel ,  getAll };
