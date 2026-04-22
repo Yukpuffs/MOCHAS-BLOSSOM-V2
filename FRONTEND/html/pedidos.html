@@ -43,7 +43,9 @@
                         <input type="email" class="inp_pedi" name="email" id="q">
                     </div>
                 </div>
-                
+
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                 <div class="row">
                     <div class="mb-2 justify-content-cente col-lg-6 col-md-6 col-sm-12">
                         <label for="Fecha" class="form-label fech"> Fecha entrega </label>
@@ -57,43 +59,13 @@
                             <input type="time" name="hora" class="inp_fech text-white" id="hora">
                         </div>
                     </div>
-                </div>
+                </div> 
+                    <button class="bts">
+                        <a href="" class="text-white">
+                            Realizar pago
+                        </a>
+                    </button>
 
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 text-center">
-                <h1 class=" fs-4"> Datos pedido</h1>                              
-                        <div class="dropdown mb-4 mt-4">
-                            <label for="medio" >Medio de pago</label>
-                                <select class="entrada text-white p-1" id="medio">
-                                    <option selected disabled>Selecciona una opción</option>
-                                    <option name="metodo_pago">Mastercard</option>
-                                    <option name="metodo_pago">Visa</option>
-                                    <option name="metodo_pago">American Express</option>
-                                    <option name="metodo_pago">PayPal</option>
-                                    <option name="metodo_pago">NEQUI</option>
-                                </select>
-                        </div>
-                        <div>
-                            <label for="tarjeta" class="form-label"> Numero tarjeta </label>
-                            <div class="m-3">
-                                <input type="text" maxlength="10" name="Num_tarj" class="inp_pedi" placeholder="XXXX-XXXX-XXXX-XXXX" id="tarjt" max>
-                            </div>
-                        </div>
-                        <div>
-                            <label for="Nombre" class="form-label"> CVV </label>
-                            <div class="m-3">
-                                <input type="text" maxlength="4" class="inp_pedi" name="cvv" placeholder=" 123" id="cvv">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="Nombre" class="form-label"> Fecha Caducidad</label>
-                            <div class="m-3">
-                                <input type="date" class="inp_pedi text-white" name="fech_cad" id="fc">
-                            </div>
-                        </div>
-                        <div class="mt-4">
-                            <input type="submit" value="Enviar Pedido" class="btns text-white p-2 fontt-text rounded-3">
-                        </div>
             </div>    
     </div>
 </form>
