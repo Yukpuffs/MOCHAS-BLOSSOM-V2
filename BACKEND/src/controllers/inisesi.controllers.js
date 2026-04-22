@@ -14,7 +14,7 @@ const GetALL = async (req, res) => {
 }
 
 // POST /api/inisesi/ - Login
-const Getlogin = async (req, res) => {
+const createlogin = async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -75,4 +75,4 @@ const Getlogin = async (req, res) => {
 
 
 
-module.exports = { Getlogin, GetALL };
+module.exports = { createlogin, GetALL };
