@@ -1,4 +1,4 @@
-const PedidosModel = require('../models/pedidos.models');
+const PedidosModel = require('../models/Pagos.model');
  
 const getAll = async (req, res) => {
   try {

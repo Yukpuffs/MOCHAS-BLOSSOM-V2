@@ -21,7 +21,7 @@ app.use('/api/producto', productoRouter);
 const actualizarDatosRouter = require('./routes/actualizarDatos.routes');
 app.use('/api/actualizarDatos', actualizarDatosRouter);
 
-const pagosrouter = require('./routes/Pagos.routes')
-app.use('api/pagos', pagosrouter)
+const pagosrouter = require('./routes/pagos.routes')
+app.use('/api/pagos', pagosrouter)
 
-module.exports = app;
+module.exports = app; 
