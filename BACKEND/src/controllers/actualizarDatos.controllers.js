@@ -9,11 +9,6 @@ const getALL = async (req, res) => {
   }
 };
 
-// formato para enviar solo los campos que se desean actualizar en postman
-//ejemplo: { 
-// "nombre": "Nuevo Nombre", 
-// "telefono": "123456789" 
-//}
 const Patch = async (req, res) => {
   try {
     const { id } = req.params;

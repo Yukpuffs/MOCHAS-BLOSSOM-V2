@@ -11,18 +11,13 @@ const GetALL = async (req, res) => {
 
 const GetByid = async (req, res) => {
     try {
-    const { id } = req.params;
-    const data = await productoModel.getById(id);
-    res.json({ ok: true, data });
+        const { id } = req.params;
+        const data = await productoModel.getById(id);
+        res.json({ ok: true, data });
     }catch (err) {
-    res.status(500).json({ ok: false, msg: err.message });
+        res.status(500).json({ ok: false, msg: err.message });
   }
 };
-//formato para enviar los datos del producto en postman
-// {
-//     "sabor": "Chocolate",  
-//     "relleno": "Crema de vainilla",
-// } y asi....
 
 const Create = async (req, res) => {
     try {

@@ -25,11 +25,7 @@ const Getlogin = async (req, res) => {
         msg: 'Email y contraseña son requeridos'
       });
     }
-
-   
-
-    // validacion en la base de datos
-    // Buscar usuario en tabla ini_sesi
+    
     const usuario = await usuarioModel.findByEmailRegis(email);
 
     if (!usuario) {
