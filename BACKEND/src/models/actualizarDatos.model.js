@@ -14,7 +14,7 @@ const patchcuenta = async (id, campos) => {
   const setClause = keys.map(k => `${k} = ?`).join(', ');
 
   const [result] = await pool.query(
-    `UPDATE cuenta SET ${setClause} WHERE idcuenta = ?`,
+    `UPDATE cuenta SET ${setClause} WHERE id = ?`,
     [...values, id]
   );
   return result;
