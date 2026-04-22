@@ -24,4 +24,7 @@ app.use('/api/actualizarDatos', actualizarDatosRouter);
 const pagosrouter = require('./routes/pagos.routes')
 app.use('/api/pagos', pagosrouter)
 
+const carritoRouter = require('./routes/carrito.routes');
+app.use('/api/carrito', carritoRouter);
+
 module.exports = app; 
