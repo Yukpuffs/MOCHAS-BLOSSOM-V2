@@ -12,4 +12,8 @@ app.use('/auth/registro', crearsesionRouter);
 const cerrarsesionRouter = require('./routes/cerrar.route');
 app.use('/auth/cerrar', cerrarsesionRouter);
 
+// Rutas del carrito
+const carritoRouter = require('./routes/carrito.routes');
+app.use('/api/carrito', carritoRouter);
+
 module.exports = app;
