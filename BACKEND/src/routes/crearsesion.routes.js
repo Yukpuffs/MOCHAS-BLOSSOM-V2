@@ -1,13 +1,13 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router;
+const {verificacionToken} = ('../middleware/authMiddleware');
 const ctrl = require('../controllers/crearsesion.controller');
 
-router.get('/', ctrl.getAll);
-router.post('/', ctrl.create);
+router.get('/', verificacionToken, ctrl.getAll);
+router.post('/', verificacionToken, ctrl.create);
 
-router.get('/', ctrl.getini);        
-router.post('/iniciar', ctrl.createlogin);  
+router.get('/', verificacionToken, ctrl.getini);        
+router.post('/iniciar', verificacionToken, ctrl.createlogin);  
 
-router.post('/', ctrl.cerrar);
+router.post('/', verificacionToken, ctrl.cerrar);
 
 module.exports = router;

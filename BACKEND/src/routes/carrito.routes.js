@@ -1,18 +1,17 @@
-const express = require('express');
-const router  = express.Router();
- 
-const carritocontrol = require('../controllers/carrito.controller');
- 
+const router = require('express').Router;
+const {verificacionToken} = ('../middleware/authMiddleware');
+const ctrl = require('../controllers/carrito.controller');
+
 // GET  /api/carrito          
-router.get('/', carritocontrol.getCarrito);
+router.get('/', verificacionToken, carritocontrol.getCarrito);
  
 // POST /api/carrito/items    
-router.post('/items', carritocontrol.addItem);
+router.post('/items', verificacionToken, carritocontrol.addItem);
  
 // PUT  /api/carrito/items/:id 
-router.put('/items/:id', carritocontrol.updateItem);
+router.put('/items/:id', verificacionToken, carritocontrol.updateItem);
  
 // DELETE /api/carrito/items/:id 
-router.delete('/items/:id', carritocontrol.deleteItem);
+router.delete('/items/:id', verificacionToken, carritocontrol.deleteItem);
  
 module.exports = router;
