@@ -1,8 +1,9 @@
-const router = require('express').Router;
-const {verificacionToken} = ('../middleware/authMiddleware');
-const ctrl = require('../controllers/actualizarDatos.controller');
+const express = require('express');
+const router = express.Router();
+const { verificarToken } = require('../middleware/authMiddleware');
+const ctrl = require('../controllers/actualizarDatos.controllers');
 
-router.get('/', verificacionToken, ctrl.getALL);            // GET   /api/actualizarDatos
-router.patch('/:id', verificacionToken, ctrl.Patch);          // PUT   /api/actualizarDatos/id
+router.get('/', verificarToken, ctrl.getALL);            // GET   /api/actualizarDatos
+router.patch('/:id', verificarToken, ctrl.Patch);          // PUT   /api/actualizarDatos/id
 
 module.exports = router;

@@ -73,7 +73,7 @@ const createlogin = async (req, res) => {
       });
     }
     
-    await crearsesionModel.findByEmail(email);
+    const usuario = await crearsesionModel.findByEmail(email);
 
     // 2. Compara la contraseña con bcrypt
     const passwordValida = await bcrypt.compare(contraseña, usuario.contraseña); // Cambié passwordd por contraseña

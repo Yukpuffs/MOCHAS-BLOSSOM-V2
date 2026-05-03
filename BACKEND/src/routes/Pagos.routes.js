@@ -1,9 +1,10 @@
-const router = require('express').Router;
-const {verificacionToken} = ('../middleware/authMiddleware');
+const express = require('express');
+const router = express.Router();
+const { verificarToken } = require('../middleware/authMiddleware');
 const ctrl = require('../controllers/Pagos.controller');
 
-router.get('/',  verificacionToken, ctrl.getAll);
-router.get('/:id', verificacionToken,  ctrl.getById);
-router.post('/', verificacionToken,  ctrl.create)
+router.get('/',  verificarToken, ctrl.getAll);
+router.get('/:id', verificarToken,  ctrl.getById);
+router.post('/', verificarToken,  ctrl.create)
 
 module.exports = router

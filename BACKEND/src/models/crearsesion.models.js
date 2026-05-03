@@ -36,13 +36,12 @@ const getini = async () => {
   return rows;
 }
 
-// Modelo para tabla ini_sesi (login)
-const createlogin = async ({ email, contraseña }) => {
+const updateToken = async (id, token) => {
   const [result] = await pool.query(
-    'INSERT INTO crearsesion ( email, contraseña) VALUES (?, ?)',
-    [ email, contraseña]
+    'UPDATE crearsesion SET token = ? WHERE id = ?',
+    [token, id]
   );
-  return { id: result.insertId,  email, contraseña };
+  return result;
 };
 
 // ----------------------------------------------Consultas cerrar sesión-----------------------------------------------
@@ -73,4 +72,4 @@ const deleteExpired = async () => {
 };
 
 
-module.exports = {getAll, create, createlogin , findByEmail, getini, cerrar, addToBlacklist, isBlacklisted,deleteExpired};
+module.exports = {getAll, create, findByEmail, getini, updateToken, addToBlacklist, isBlacklisted,deleteExpired};

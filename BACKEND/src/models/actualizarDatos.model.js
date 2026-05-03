@@ -2,7 +2,7 @@ const pool = require('../config/db');
 
 const getALL = async () => {
   const [rows] = await pool.query(
-    'SELECT * FROM cuenta'
+    'SELECT * FROM crearsesion'
 );
   return rows;
 };
@@ -14,7 +14,7 @@ const patchcuenta = async (id, campos) => {
   const setClause = keys.map(k => `${k} = ?`).join(', ');
 
   const [result] = await pool.query(
-    `UPDATE cuenta SET ${setClause} WHERE id = ?`,
+    `UPDATE crearsesion SET ${setClause} WHERE id = ?`,
     [...values, id]
   );
   return result;

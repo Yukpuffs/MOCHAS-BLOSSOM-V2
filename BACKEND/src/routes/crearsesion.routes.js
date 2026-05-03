@@ -1,13 +1,18 @@
-const router = require('express').Router;
-const {verificacionToken} = ('../middleware/authMiddleware');
+const express = require('express');
+const router = express.Router();
+const { verificarToken } = require('../middleware/authMiddleware');
 const ctrl = require('../controllers/crearsesion.controller');
 
-router.get('/', verificacionToken, ctrl.getAll);
-router.post('/', verificacionToken, ctrl.create);
+// Obtener todos (requiere token)
+router.get('/', verificarToken, ctrl.getAll);
 
-router.get('/', verificacionToken, ctrl.getini);        
-router.post('/iniciar', verificacionToken, ctrl.createlogin);  
+// Registrarse (SIN token)
+router.post('/registro', ctrl.create);
 
-router.post('/', verificacionToken, ctrl.cerrar);
+// Iniciar sesión (SIN token)
+router.post('/login', ctrl.createlogin);
+
+// Cerrar sesión (requiere token)
+router.post('/logout', verificarToken, ctrl.cerrar);
 
 module.exports = router;
