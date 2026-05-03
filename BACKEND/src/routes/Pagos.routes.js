@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { verificarToken } = require('../middleware/authMiddleware');
-const ctrl = require('../controllers/Pagos.controller');
+const ctrl = require('../controllers/Pagos.controllers');
 
 router.get('/',  verificarToken, ctrl.getAll);
 router.get('/:id', verificarToken,  ctrl.getById);

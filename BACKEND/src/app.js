@@ -15,10 +15,10 @@ app.use('/api/producto', productoRouter);
 const actualizarDatosRouter = require('./routes/actualizarDatos.routes');
 app.use('/api/actualizarDatos', actualizarDatosRouter);
 
-//const pagosrouter = require('./routes/Pagos.routes')
-//app.use('/api/pagos', pagosrouter)
+const pagosrouter = require('./routes/Pagos.routes')
+app.use('/api/pagos', pagosrouter)
 
-//const carritoRouter = require('./routes/carrito.routes');
-//app.use('/api/carrito', carritoRouter);
+const carritoRouter = require('./routes/carrito.routes');
+app.use('/api/carrito', carritoRouter);
 
 module.exports = app; 
