@@ -7,7 +7,6 @@ import Torta from "../assets/Menu/Tortas/torta.png";
 function Menu({agregarAlCarrito}){
     return(
     <>
-    
         <Card
         imagen={Brownie}
         titulo="Brownie"
