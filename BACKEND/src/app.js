@@ -5,6 +5,12 @@ require('dotenv').config();
 // Middleware para parsear JSON
 app.use(express.json());
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
+
 // Rutas
 const crearsesionRouter = require('./routes/crearsesion.routes');
 app.use('/auth', crearsesionRouter);
