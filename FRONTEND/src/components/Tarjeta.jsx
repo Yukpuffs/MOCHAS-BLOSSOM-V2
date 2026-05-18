@@ -1,4 +1,5 @@
 import "../index.css";
+import Boton from "./Botones.jsx";
 
 function Card({ imagen, titulo, descripcion, agregarAlCarrito }) {
   return (
@@ -16,16 +17,18 @@ function Card({ imagen, titulo, descripcion, agregarAlCarrito }) {
 
           <p>{descripcion}</p>
 
-          <button
-            onClick={() => agregarAlCarrito({tipo: titulo})}
-          >
-            Agregar
-          </button>
+          <Boton
+            Texto="Agregar"
+            accion={() =>
+              agregarAlCarrito({ tipo: titulo })
+            }
+          />
 
         </div>
       </div>
     </div>
   );
 }
+
 
 export default Card;
