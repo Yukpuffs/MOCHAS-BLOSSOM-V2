@@ -1,19 +1,18 @@
-import Navbar from "./components/navbar.jsx";
+import { Routes, Route } from "react-router-dom";
+
+import Principal from "./pages/pag_principal";
 import Menu from "./pages/Menu";
-import { useState } from "react";
+import Inicio from "./pages/iniciosesion";
+import Registro from "./pages/registro";
 
 function App() {
-  const [carrito, setCarrito] = useState([]);
-
-  const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-  };
-
   return (
-    <>
-      <Navbar/>
-      <Menu agregarAlCarrito={agregarAlCarrito}/>
-    </>
+    <Routes>
+      <Route path="/" element={<Principal />} />
+      <Route path="/menu" element={<Menu />} />
+      <Route path="/inicio" element={<Inicio />} />
+      <Route path="/registro" element={<Registro />} />
+    </Routes>
   );
 }
 
