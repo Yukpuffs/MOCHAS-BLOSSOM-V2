@@ -2,11 +2,13 @@ import Card from "../components/Tarjeta.jsx";
 import Brownie from "../assets/Menu/Brownies/imagee.png";
 import Cupcake from "../assets/Menu/Cupcakes/cupcake.png";
 import Torta from "../assets/Menu/Tortas/torta.png";
+import Navbar from "../components/navbar";
 
 
 function Menu({agregarAlCarrito}){
     return(
     <>
+        <Navbar></Navbar>
         <Card
         imagen={Brownie}
         titulo="Brownie"
