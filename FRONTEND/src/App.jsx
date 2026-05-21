@@ -4,6 +4,7 @@ import Principal from "./pages/pag_principal";
 import Menu from "./pages/Menu";
 import Inicio from "./pages/iniciosesion";
 import Registro from "./pages/registro";
+import Carrito from "./pages/Carrit";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/menu" element={<Menu />} />
       <Route path="/inicio" element={<Inicio />} />
       <Route path="/registro" element={<Registro />} />
+      <Route path="/carrito" element={<Carrito />} />
     </Routes>
   );
 }

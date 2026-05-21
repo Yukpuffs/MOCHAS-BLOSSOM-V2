@@ -1,7 +1,9 @@
 import "../index.css";
 import Boton from "./Botones.jsx";
+import {useCarrito} from "../../Hooks/main.jsx"
 
-function Card({ imagen, titulo, descripcion, agregarAlCarrito }) {
+function Card({ titulo, descripcion, imagen, cantidad }) {
+  const { agregarAlCarrito } = useCarrito();
   return (
     <div className="col-lg-4 col-md-6 col-sm-12 p-4">
       <div className="par">
@@ -20,7 +22,12 @@ function Card({ imagen, titulo, descripcion, agregarAlCarrito }) {
           <Boton
             Texto="Agregar"
             accion={() =>
-              agregarAlCarrito({ tipo: titulo })
+              agregarAlCarrito({ 
+                          tipo: titulo,
+                          descripcion: descripcion,
+                          img: imagen,
+                          cantidad: 1
+            })
             }
           />
 
