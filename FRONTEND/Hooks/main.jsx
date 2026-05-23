@@ -1,3 +1,4 @@
+//--------------------------------------------------------Hook para cargar cards en el carrito--------------------------------------------------------------------------
 import { useState, useEffect } from 'react';
 
 export function useCarrito() {
@@ -44,7 +45,7 @@ export function useCarrito() {
   };
 }
 
-
+//-----------------------------------------------------------------Hook para boton de agregar al carrito---------------------------------------------------------------------
 
 const agregarAlCarrito = (productoInfo) => {
     const existe = carrito.find(p => p.tipo === productoInfo.tipo);
@@ -60,3 +61,18 @@ const agregarAlCarrito = (productoInfo) => {
       setCarrito([...carrito, productoInfo]);
     }
   };
+
+//------------------------------------------------------------------------------Hook para editar datos cuenta---------------------------------------------------------------------
+
+ export function useEditarFormulario(){
+
+    const [inputsDeshabilitados, setInputsDeshabilitados] = useState(true);
+
+    const toggleEdita = () => {
+    setInputsDeshabilitados(!inputsDeshabilitados);
+  };
+  return{
+    inputsDeshabilitados,
+    toggleEdita
+  }
+ }
