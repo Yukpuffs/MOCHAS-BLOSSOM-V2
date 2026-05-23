@@ -1,6 +1,6 @@
 import "../index.css";
 import Boton from "./Botones.jsx";
-import {useCarrito} from "../../Hooks/main.jsx"
+import {useCarrito} from "../../Hooks/funciones.jsx"
 
 function Card({ titulo, descripcion, imagen, cantidad }) {
   const { agregarAlCarrito } = useCarrito();

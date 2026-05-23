@@ -64,15 +64,16 @@ const agregarAlCarrito = (productoInfo) => {
 
 //------------------------------------------------------------------------------Hook para editar datos cuenta---------------------------------------------------------------------
 
- export function useEditarFormulario(){
+export function useEditarFormulario(){
 
     const [inputsDeshabilitados, setInputsDeshabilitados] = useState(true);
 
     const toggleEdita = () => {
-    setInputsDeshabilitados(!inputsDeshabilitados);
-  };
-  return{
-    inputsDeshabilitados,
-    toggleEdita
-  }
- }
+        setInputsDeshabilitados(prev => !prev);
+    };
+
+    return {
+        inputsDeshabilitados,
+        toggleEdita
+    };
+}
