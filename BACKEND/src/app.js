@@ -5,15 +5,26 @@ require('dotenv').config();
 // Middleware para parsear JSON
 app.use(express.json());
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'http://localhost:5173'
+}));
+
 // Rutas
 const crearsesionRouter = require('./routes/crearsesion.routes');
-app.use('/auth/registro', crearsesionRouter);
+app.use('/auth', crearsesionRouter);
 
-const cerrarsesionRouter = require('./routes/cerrar.route');
-app.use('/auth/cerrar', cerrarsesionRouter);
+const productoRouter = require('./routes/producto.routes');
+app.use('/api/producto', productoRouter);
 
-// Rutas del carrito
+const actualizarDatosRouter = require('./routes/actualizarDatos.routes');
+app.use('/api/actualizarDatos', actualizarDatosRouter);
+
+const pagosrouter = require('./routes/Pagos.routes')
+app.use('/api/pagos', pagosrouter)
+
 const carritoRouter = require('./routes/carrito.routes');
 app.use('/api/carrito', carritoRouter);
 
-module.exports = app;
+module.exports = app; 
