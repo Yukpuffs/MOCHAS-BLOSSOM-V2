@@ -74,6 +74,12 @@ const createlogin = async (req, res) => {
     }
     
     const usuario = await crearsesionModel.findByEmail(email);
+    if (!usuario) {
+      return res.status(401).json({
+        ok: false,
+        msg: 'Email o contraseña incorrecto'
+      });
+    }
 
     // 2. Compara la contraseña con bcrypt
     const passwordValida = await bcrypt.compare(contraseña, usuario.contraseña); // Cambié passwordd por contraseña
@@ -81,7 +87,7 @@ const createlogin = async (req, res) => {
     if (!passwordValida) {
       return res.status(401).json({
         ok: false,
-        msg: 'Contraseña incorrecta'
+        msg: 'Email o contraseña incorrecta'
       });
     }
 

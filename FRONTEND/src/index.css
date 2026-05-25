@@ -17,25 +17,25 @@ body{
 
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 60px;
-  right:0;
-  background: rgb(153, 121, 106);
-  text-emphasis-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 7px 12px rgba(0,0,0,0.15);
-  min-width: 180px;
-  padding: 10px 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition:  0.25s ease, 0.25s ease;
-  z-index: 1000;
+    position: absolute;
+    top: 60px;
+    right:0;
+    background: rgb(153, 121, 106);
+    text-emphasis-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 12px rgba(0,0,0,0.15);
+    min-width: 180px;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition:  0.25s ease, 0.25s ease;
+    z-index: 1000;
 }
 @media screen and ( min-width: 464px) and ( max-width: 541px){
     .dropdown-menu{
@@ -44,35 +44,35 @@ body{
     }
 } 
 .dropdown-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .dropdown-item {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-  text-decoration: none;
-  transition: 0.2s;
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .dropdown-item:hover {
-  background: #f3f3f3;
+    background: #f3f3f3;
 }
 
 .btnusuario {
-  background: transparent;
-  cursor: pointer;
+    background: transparent;
+    cursor: pointer;
 }
 
 .usuario {
-  border-radius: 50%;
-  transition: 0.2s ease;
+    border-radius: 50%;
+    transition: 0.2s ease;
 }
 
 .btnusuario:hover .usuario {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /*----------------------Pagina Principal------------------------------*/
@@ -99,23 +99,58 @@ body{
 /*--------------------------Inicio sesion------------------------------*/
 
 
-#card-present{
-    padding-bottom: 30vh;
-
+.auth-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
 }
-.inicio{
+
+.auth-presentacion {
+    background-color: #99796a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+}
+
+.auth-formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+}
+
+.auth-formulario .soft-card {
+    width: min(100%, 520px);
+    margin: 0;
+}
+
+.mc {
+    max-width: 120px;
+    height: auto;
+}
+
+.pst {
+    max-width: min(320px, 80vw);
+    height: auto;
+}
+
+.inicio {
     background-color: #99796a;
     color: #ffffff;
 }
-.iniciocont{
+
+.iniciocont {
     background-color: #a38c81;
     border: 4px dotted #ffffff;
     margin-top: 20%;
 }
 
-.inicio h1{
-    font-family:'Spartan', sans-serif;
-    font: 20px bold;
+.inicio h1 {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
 }
 
 .login-container {
@@ -127,9 +162,9 @@ body{
 .soft-card {
     background: #fef7ec;
     border-radius: 32px;
-    width: 100%;    
-    min-height: 100px!important;
-    max-width: 550px; 
+    width: 100%;
+    min-height: 100px !important;
+    max-width: 550px;
     padding: 60px;
     box-shadow: 0 20px 40px #00000008, 0 8px 24px #00000005, inset 0 1px 0 #ffffffcc;
     border: 1px solid #ffffff66;
@@ -146,14 +181,22 @@ body{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 8px;
-    letter-spacing: -0.02px;
+    letter-spacing: 0;
     text-align: center;
+}
+
+.auth-presentacion .comfort-title {
+    color: #ffffff;
 }
 
 .gentle-subtitle {
     color: #8b6655b3;
     font-size: 15px;
     font-weight: 400;
+}
+
+.auth-presentacion .gentle-subtitle {
+    color: #ffffffd9;
 }
 
 .soft-field {
@@ -170,11 +213,12 @@ body{
     transition: all 0.3s ease;
 }
 
-.field-container input:focus~label,
-.field-container input:valid~label{
+.field-container input:focus ~ label,
+.field-container input:valid ~ label {
     color: #551A2B;
-    transform: translateY(-1.6em); /*Desplazamiento del label hacia arriba*/
+    transform: translateY(-1.6em);
 }
+
 .soft-field input {
     width: 100%;
     background: transparent;
@@ -250,11 +294,10 @@ body{
 
 .comfort-button {
     width: 100%;
-    background: transparent;
     color: #8b6655;
     border: none;
     border-radius: 16px;
-    padding: 0;
+    padding: 0 20px;
     cursor: pointer;
     font-family: inherit;
     font-size: 15px;
@@ -262,18 +305,14 @@ body{
     min-height: 54px;
     max-width: 250px;
     background: linear-gradient(135deg, #f0ceaa 0%, #e0be9c 100%);
-    margin-top: 30px;
-
+    margin: 30px auto 0;
+    display: block;
 }
 
 .comfort-button:hover {
     transform: translateY(-1px);
-}
-
-.comfort-button:hover .button-background {
     background: linear-gradient(135deg, #ebc49a 0%, #dbb88c 100%);
     box-shadow: 0 8px 16px #f0ceaa66;
-    background-color: #99796a;
 }
 
 .button-text {
@@ -282,11 +321,11 @@ body{
     transition: opacity 0.3s ease;
 }
 
-/* Comfort Signup */
 .comfort-signup {
     text-align: center;
     font-size: 14px;
     color: #8b6655b3;
+    margin-top: 20px;
 }
 
 .signup-text {
@@ -296,21 +335,53 @@ body{
 .signup-link {
     font-weight: 500;
 }
-#card-present_regis{
-    padding-bottom: 30vh;
-}
-#caja_regis{
-        padding-top: 110px;
-    }
-@media screen and (max-width:500px) {   
-    #caja_inicio{
-        padding: 3px !important;
-    }
-    #caja_regis{
-        padding: 3px !important;
-    }
+
+#card-present,
+#card-present_regis {
+    padding-bottom: 0;
 }
 
+#caja_regis {
+    padding-top: 110px;
+}
+
+@media screen and (max-width: 768px) {
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-presentacion {
+        min-height: auto;
+        padding: 32px 20px 24px;
+    }
+
+    .auth-formulario {
+        padding: 24px 16px 36px;
+    }
+
+    .auth-formulario .soft-card {
+        width: 100%;
+        max-width: 440px;
+        padding: 32px 20px;
+        border-radius: 20px;
+    }
+
+    .comfort-header {
+        margin-bottom: 20px;
+    }
+
+    .comfort-title {
+        font-size: 26px;
+    }
+
+    .gentle-subtitle {
+        font-size: 14px;
+    }
+
+    .pst {
+        max-width: 220px;
+    }
+}
 /*---------------------------------Nosostros--------------------------*/
 
 .if{
