@@ -1,4 +1,4 @@
-import { useCarrito } from '../../Hooks/main.jsx';
+import { useCarrito } from '../../Hooks/funciones.jsx';
 
 function Carrito() {
   const { carrito, sumar, restar, eliminarDelCarrito } = useCarrito();

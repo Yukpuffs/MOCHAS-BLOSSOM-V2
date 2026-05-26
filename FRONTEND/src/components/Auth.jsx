@@ -59,49 +59,53 @@ function FormularioAuth({
   };
 
 return (
-    <main className="auth-page">
-        <section className="auth-presentacion">
-        <div className="comfort-header">
+  <main className="auth-page">
+    <section className="auth-presentacion">
+      <div className="comfort-header">
         {logo && <img className="mc" src={logo} alt="Logo" width="100" />}
         <h1 className="comfort-title">{titulo}</h1>
         <p className="gentle-subtitle">
-            {subtituloKR} <br /> {subtituloES}
+          {subtituloKR} <br /> {subtituloES}
         </p>
         {imagen && <img className="pst mt-5" src={imagen} alt="brownie" />}
-        </div>
+      </div>
     </section>
 
     <section className="auth-formulario">
-        <div className="soft-card">
-        <form>
-            {campos.map((campo, index) => (
+      <div className="soft-card">
+        <form onSubmit={handleSubmit}>
+          {campos.map((campo, index) => (
             <div className="soft-field" key={index}>
-                <div className="field-container">
-                    <input
-                    type={campo.tipo}
-                    id={campo.id}
-                    placeholder={campo.placeholder}
-                    required
-                    />
-                    <label htmlFor={campo.id}>{campo.label}</label>
-                </div>
+              <div className="field-container">
+                <input
+                  type={campo.tipo}
+                  id={campo.id}
+                  name={campo.id}
+                  placeholder={campo.placeholder}
+                  required
+                />  
+                <label htmlFor={campo.id}>{campo.label}</label>
+              </div>
             </div>
-            ))}
+          ))}
 
-            <button className="comfort-button" type="submit">
-                {textoBoton}
-            </button>
+          <button className="comfort-button" type="submit">
+            {textoBoton}
+          </button>
+
+          {mensaje && <p className="auth-message">{mensaje}</p>}
+          {error && <p className="auth-error">{error}</p>}
         </form>
 
         <div className="comfort-signup">
-            <span>{textoInferior}</span>
-            <Link to={ruta} className="comfort-link signup-link">
-                {textoLink}
-            </Link>
+          <span>{textoInferior}</span>
+          <Link to={ruta} className="comfort-link signup-link">
+            {textoLink}
+          </Link>
         </div>
-    </div>
+      </div>
     </section>
-</main>
+  </main>
 );
 }
 

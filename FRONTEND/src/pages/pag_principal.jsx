@@ -1,8 +1,10 @@
 import neko from "../assets/botones/neko.png";
 import Boton from "../components/Botones";
 import Navbar from "../components/navbar";
+import { useNavigate } from "react-router-dom";
 
 function Principal() {
+    const navigate = useNavigate();
     return (
         <>
         <Navbar></Navbar>
@@ -20,10 +22,8 @@ function Principal() {
                     <img src={neko} alt="gato" width="30"/><br />
 
                     <Boton
-                        Texto="Iniciar sesión"
-                        accion={() =>
-                        agregarAlCarrito({ tipo: titulo })
-                        }
+                    Texto="Iniciar sesión"
+                    accion={() => navigate("/inicio")}
                     />
                 </div>
 
@@ -33,10 +33,8 @@ function Principal() {
                     <img src={neko} alt="gato" width="30"/><br />
 
                     <Boton
-                        Texto="Registrarse"
-                        accion={() =>
-                        agregarAlCarrito({ tipo: titulo })
-                        }
+                    Texto="Registrarse"
+                    accion={() => navigate("/registro")}
                     />
 
                 </div>

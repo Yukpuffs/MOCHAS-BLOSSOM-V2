@@ -111,25 +111,25 @@ body{
 
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-menu {
-  position: absolute;
-  top: 60px;
-  right:0;
-  background: rgb(153, 121, 106);
-  text-emphasis-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 7px 12px rgba(0,0,0,0.15);
-  min-width: 180px;
-  padding: 10px 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition:  0.25s ease, 0.25s ease;
-  z-index: 1000;
+    position: absolute;
+    top: 60px;
+    right:0;
+    background: rgb(153, 121, 106);
+    text-emphasis-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 12px rgba(0,0,0,0.15);
+    min-width: 180px;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition:  0.25s ease, 0.25s ease;
+    z-index: 1000;
 }
 @media screen and ( min-width: 464px) and ( max-width: 541px){
     .dropdown-menu{
@@ -138,35 +138,35 @@ body{
     }
 } 
 .dropdown-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .dropdown-item {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-  text-decoration: none;
-  transition: 0.2s;
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .dropdown-item:hover {
-  background: #f3f3f3;
+    background: #f3f3f3;
 }
 
 .btnusuario {
-  background: transparent;
-  cursor: pointer;
+    background: transparent;
+    cursor: pointer;
 }
 
 .usuario {
-  border-radius: 50%;
-  transition: 0.2s ease;
+    border-radius: 50%;
+    transition: 0.2s ease;
 }
 
 .btnusuario:hover .usuario {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /*----------------------Pagina Principal------------------------------*/
@@ -192,6 +192,7 @@ body{
 
 /*--------------------------Inicio sesion------------------------------*/
 /*--------------------------Inicio sesion / Registro------------------------------*/
+
 
 .auth-page {
     min-height: 100vh;
@@ -474,45 +475,8 @@ body{
 
     .pst {
         max-width: 220px;
-        margin-top: 24px !important;
-    }
-
-    .login-container {
-        padding: 16px;
-    }
-
-    #caja_inicio,
-    #caja_regis {
-        padding: 3px !important;
     }
 }
-
-@media screen and (max-width: 480px) {
-    .auth-presentacion {
-        padding: 28px 16px 20px;
-    }
-
-    .auth-formulario {
-        padding: 20px 12px 32px;
-    }
-
-    .auth-formulario .soft-card {
-        padding: 28px 16px;
-    }
-
-    .comfort-title {
-        font-size: 24px;
-    }
-
-    .comfort-button {
-        max-width: 100%;
-    }
-
-    .pst {
-        max-width: 190px;
-    }
-}
-
 /*---------------------------------Nosostros--------------------------*/
 
 .if{

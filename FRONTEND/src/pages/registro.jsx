@@ -38,6 +38,7 @@ textoBoton="Sign up"
 textoInferior="¿Ya tienes cuenta?"
 textoLink="Iniciar sesión"
 ruta="/registro"
+endpoint="/auth/registro"
 />
 
 )

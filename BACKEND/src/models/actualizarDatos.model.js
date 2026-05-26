@@ -19,5 +19,12 @@ const patchcuenta = async (id, campos) => {
   );
   return result;
 };
+const eliminarCuenta = async (id) => {
+  const [result] = await pool.query(
+    'DELETE FROM crearsesion WHERE id = ?',
+    [id]
+  );
 
-module.exports = { patchcuenta, getALL };
+  return result;
+};
+module.exports = { patchcuenta, getALL, eliminarCuenta };
