@@ -1,5 +1,4 @@
 const pool = require('../config/db');
-const { cerrar } = require('../controllers/crearsesion.controller');
 
 //----------------------------------------------Consultas registro de sesión-----------------------------------------------
 const getAll = async () => {
