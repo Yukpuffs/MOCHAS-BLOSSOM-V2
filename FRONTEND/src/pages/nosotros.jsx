@@ -3,7 +3,9 @@ import Ig from "../assets/botones/redes/ig.png"
 import Pin from "../assets/botones/redes/pin.png"
 import Face from "../assets/botones/redes/face.png"
 import Tik from "../assets/botones/redes/tik.png"
+
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 
 function Nosotros() {
@@ -64,8 +66,8 @@ function Nosotros() {
                     />
                 </div>        
             </div>
-
         </div>
+        <Footer />
     </>
     )
 }

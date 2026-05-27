@@ -4,6 +4,7 @@ import deseos from "../assets/botones/cora.png";
 import compras from "../assets/botones/shop.png";
 
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 import { useEffect, useState } from "react";
 import api from "../api/axiosConfig";
@@ -267,6 +268,7 @@ function FormularioCuenta() {
           </div>
         </div>
       </form>
+      <Footer />
     </>
   );
 }

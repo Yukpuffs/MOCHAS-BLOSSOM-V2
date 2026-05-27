@@ -1,0 +1,11 @@
+
+function footer({}){
+    return(
+        <footer class="text-center p-4 mt-5">
+            <p>© 2025 Mocha's Blossom - Todos los derechos reservados</p>
+        </footer>
+    )
+}
+
+export default footer;
+

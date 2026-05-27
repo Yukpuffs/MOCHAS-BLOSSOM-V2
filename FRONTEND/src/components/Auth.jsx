@@ -88,10 +88,6 @@ return (
               </div>
             </div>
           ))}
-
-          <button className="comfort-button" type="submit">
-            {textoBoton}
-          </button>
           <button className="comfort-button" type="submit">
             {textoBoton}
           </button>

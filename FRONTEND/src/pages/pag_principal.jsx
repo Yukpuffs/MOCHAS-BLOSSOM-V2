@@ -1,46 +1,58 @@
 import neko from "../assets/botones/neko.png";
 import Boton from "../components/Botones";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
 
 function Principal() {
     const navigate = useNavigate();
+
     return (
         <>
-        <Navbar></Navbar>
-            <div className="container-fluid row mt-5 justify-content-center">
-                <div className="col-lg-4 col-md-4 col-sm-4 justify-content-center offset-sm-0 offset-lg-1">
-                    <iframe src="https://www.youtube.com/embed/Q9BQiZe_wpM?list=RDQ9BQiZe_wpM" className="video" height="400" width="1000" title="Video principal"/>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4">
+            <Navbar />
+
+            <div className="container-fluid mt-5">
+                <div className="row justify-content-center">
+                    <div className="col-lg-8 col-md-10 col-sm-12 text-center">
+                        <iframe
+                            src="https://www.youtube.com/embed/Q9BQiZe_wpM?list=RDQ9BQiZe_wpM"
+                            className="video"
+                            width="100%"
+                            height="400"
+                            title="Video principal"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
                 </div>
             </div>
 
-            <div className="container-fluid row mt-5 justify-content-center fontt-text">
-                <div className="col-lg-2 col-md-2 col-sm-2"></div>
-                <div className="col-lg-3 col-md-3 col-sm-3 text-center">
-                    <img src={neko} alt="gato" width="30"/><br />
+            <div className="container-fluid mt-5 fontt-text">
+                <div className="row justify-content-center text-center">
 
-                    <Boton
-                    Texto="Iniciar sesión"
-                    accion={() => navigate("/inicio")}
-                    />
+                    <div className="col-lg-3 col-md-4 col-sm-10 mb-4">
+                        <img src={neko} alt="gato" width="30" />
+                        <br />
+
+                        <Boton
+                            Texto="Iniciar sesión"
+                            accion={() => navigate("/inicio")}
+                        />
+                    </div>
+
+                    <div className="col-lg-3 col-md-4 col-sm-10 mb-4">
+                        <img src={neko} alt="gato" width="30" />
+                        <br />
+
+                        <Boton
+                            Texto="Registrarse"
+                            accion={() => navigate("/registro")}
+                        />
+                    </div>
+
                 </div>
-
-                <div className="col-lg-1 col-md-1 col-sm-1"></div>
-
-                <div className="col-lg-3 col-md-3 col-sm-3 text-center">
-                    <img src={neko} alt="gato" width="30"/><br />
-
-                    <Boton
-                    Texto="Registrarse"
-                    accion={() => navigate("/registro")}
-                    />
-
-                </div>
-                <div className="col-lg-2 col-md-2 col-sm-2"></div>
-
             </div>
+
+            <Footer />
         </>
     );
 }
