@@ -1,5 +1,6 @@
 import Carrito from "../components/carrito";
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 
 function carrito({}){
@@ -7,7 +8,7 @@ function carrito({}){
     <>
         <Navbar></Navbar>
         <Carrito></Carrito>
-
+        <Footer></Footer>
     </>
     )
 }
