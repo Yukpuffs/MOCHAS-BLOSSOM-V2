@@ -17,7 +17,7 @@ function Nosotros() {
 
                 <div className="col-lg-5 col-md-5 col-sm-12 m-5">
 
-                    <h4 className="fontt-text-bold">
+                    <h4 className="fontt-text-bold titulo">
                         Welcome to MOCHA'S BLOSSOM
                     </h4>
 
