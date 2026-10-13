@@ -1,60 +1,71 @@
 import neko from "../assets/botones/neko.png";
+import postre from "../assets/Decoraciones/postre.png";
 import Boton from "../components/Botones";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { useNavigate } from "react-router-dom";
 
+
 function Principal() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    return (
-        <>
-            <Navbar />
-
-            <div className="container-fluid mt-5">
-                <div className="row justify-content-center">
-                    <div className="col-lg-8 col-md-10 col-sm-12 text-center">
-                        <iframe
-                            src="https://www.youtube.com/embed/Q9BQiZe_wpM?list=RDQ9BQiZe_wpM"
-                            className="video"
-                            width="100%"
-                            height="400"
-                            title="Video principal"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                </div>
+  return (
+    <>
+      <Navbar />
+      <div className="container-fluid">
+        <div className="row align-items-center my-4 my-md-5 justify-content-center">
+          <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="curved-title-container">
+                <svg viewBox="0 0 700 200" className="w-100 h-auto">
+                    <defs>
+                    <path
+                        id="welcome-arc"
+                        d="M 50,150 A 300,120 0 0,1 650,150"
+                        fill="none"
+                    />
+                    </defs>
+                    <text className="bann-curved">
+                    <textPath href="#welcome-arc" startOffset="50%" textAnchor="middle">
+                        Welcome to Mocha's Blossom
+                    </textPath>
+                    </text>
+                </svg>
             </div>
 
-            <div className="container-fluid mt-5 fontt-text">
-                <div className="row justify-content-center text-center">
+            <div className="d-flex justify-content-center align-items-center gap-4 text-center mt-3 flex-wrap">
+              <div className="d-flex flex-column align-items-center">
+                <img src={neko} alt="gato" width="30" className="mb-2" />
+                <Boton
+                  Texto="Iniciar sesión"
+                  accion={() => navigate("/inicio")}
+                  className="bt_ingreso"
+                />
+              </div>
 
-                    <div className="col-lg-3 col-md-4 col-sm-10 mb-4">
-                        <img src={neko} alt="gato" width="30" />
-                        <br />
-
-                        <Boton
-                            Texto="Iniciar sesión"
-                            accion={() => navigate("/inicio")}
-                        />
-                    </div>
-
-                    <div className="col-lg-3 col-md-4 col-sm-10 mb-4">
-                        <img src={neko} alt="gato" width="30" />
-                        <br />
-
-                        <Boton
-                            Texto="Registrarse"
-                            accion={() => navigate("/registro")}
-                        />
-                    </div>
-
-                </div>
+              <div className="d-flex flex-column align-items-center">
+                <img src={neko} alt="gato" width="30" className="mb-2" />
+                <Boton
+                  Texto="Registrarse"
+                  accion={() => navigate("/registro")}
+                  className="bt_ingreso"
+                />
+              </div>
             </div>
+          </div>
 
-            <Footer />
-        </>
-    );
+          <div className="col-lg-6 col-md-6 col-sm-12 text-center">
+            <img
+              src={postre}
+              alt="Postre"
+              className="img-fluid rounded-circle"
+              style={{ maxWidth: "500px", width: "100%" }}
+            />
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
 }
 
 export default Principal;
