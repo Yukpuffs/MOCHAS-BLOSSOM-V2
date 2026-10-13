@@ -1,65 +1,65 @@
 // Navbar.jsx
 import logo from "../assets/logo/Mocha_s_blossom-removebg-preview.png"
 import usuario from "../assets/usuario/bas.png"
-import carrito from "../assets/botones/shop.png"
-import "../index.css"
-import { Link } from "react-router-dom";
+import carrito from "../assets/botones/carrito.png"
+import { Link } from "react-router-dom"
+import "../index.css";
 
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
-        <div className="container-fluid">
-
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-          </form>
-
+    <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <clipPath id="navbar-wave" clipPathUnits="objectBoundingBox">
+            <path d="M 0,0 
+                    L 1,0 
+                    L 1,0.80 
+                    C 0.9,1.05 0.8,0.65 0.7,0.85 
+                    C 0.6,1.05 0.5,0.65 0.4,0.85 
+                    C 0.3,1.05 0.2,0.65 0.1,0.85 
+                    C 0.05,0.95 0.02,0.80 0,0.85 
+                    Z" />
+          </clipPath>
+        </defs>
+      </svg>
+      <nav className="navbar navbar-expand-lg custom-navbar">
+        <div className="navbar-wave-bg" />
+        <div className="container-fluid formita">
           <img
-            className="navbar-brand align-items-center"
+            className="navbar-brand align-items-center ms-5"
             src={logo}
             width="100px"
             alt="logo"
           />
 
           <div id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2">
-
-              <li className="nav-item fontt-text">
+            <ul className="navbar-nav me-auto mb-2 titulo">
+              <li className="nav-item titulo mt-4 me-5">
                 <Link className="nav-link active" to="/menu">
                   Menu
                 </Link>
               </li>
 
-              <li className="nav-item fontt-text">
+              <li className="nav-item titulo mt-4 me-5">
                 <Link className="nav-link" to="/personalizacion">
                   Personalización
                 </Link>
               </li>
 
-              <li className="nav-item fontt-text">
+              <li className="nav-item titulo mt-4 me-5">
                 <Link className="nav-link" to="/nosotros">
                   Nosotros
                 </Link>
               </li>
 
-              <Link
-                to="/carrito"
-                className="list-group-item list-group-item-action"
-              >
+              <Link to="/carrito" className="list-group-item list-group-item-action ">
                 <img
-                  className="navbar-item"
+                  className="navbar-item mt-4 me-5"
                   src={carrito}
-                  width="40px"
+                  width="30px"
                   alt="carrito"
                 />
               </Link>
-
             </ul>
           </div>
 
@@ -69,6 +69,7 @@ function Navbar() {
               className="btnusuario border-0 rounded-circle dropdown-toggle"
               type="button"
               data-bs-toggle="dropdown"
+              data-bs-display="static"
             >
               <img
                 className="usuario"
