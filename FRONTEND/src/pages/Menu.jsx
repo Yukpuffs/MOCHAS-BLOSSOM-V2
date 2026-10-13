@@ -7,36 +7,37 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 
-function Menu({agregarAlCarrito}){
-    return(
-    <>
-        <Navbar></Navbar>
-        <Card
-            imagen={Brownie}
-            titulo="Brownie"
-            descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus ligula nibh. Vestibulum maximus leo eu diam imperdiet, at congue justo lobortis. Ut elementum leo maximus, lacinia lectus venenatis, ornare ante. Aliquam erat volutpat. Mauris maximus nibh ac eros eleifend blandit a ac diam."
+function Menu({ agregarAlCarrito }) {
+    return (
+        <>
+            <Navbar />
+            <div className="container my-5">
+                <div className="row justify-content-center g-4">
+                    <Card
+                        imagen={Brownie}
+                        titulo="Brownie"
+                        descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus ligula nibh. Vestibulum maximus leo eu diam imperdiet, at congue justo lobortis. Ut elementum leo maximus, lacinia lectus venenatis, ornare ante. Aliquam erat volutpat. Mauris maximus nibh ac eros eleifend blandit a ac diam."
+                        agregarAlCarrito={agregarAlCarrito}
+                    />
 
-            agregarAlCarrito={agregarAlCarrito}
-        />
+                    <Card
+                        imagen={Cupcake}
+                        titulo="Cupcake"
+                        descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus ligula nibh. Vestibulum maximus leo eu diam imperdiet, at congue justo lobortis. Ut elementum leo maximus, lacinia lectus venenatis, ornare ante. Aliquam erat volutpat. Mauris maximus nibh ac eros eleifend blandit a ac diam."
+                        agregarAlCarrito={agregarAlCarrito}
+                    />
 
-        <Card
-            imagen={Cupcake}
-            titulo="Cupcake"
-            descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus ligula nibh. Vestibulum maximus leo eu diam imperdiet, at congue justo lobortis. Ut elementum leo maximus, lacinia lectus venenatis, ornare ante. Aliquam erat volutpat. Mauris maximus nibh ac eros eleifend blandit a ac diam."
-
-            agregarAlCarrito={agregarAlCarrito}
-        />
-
-        <Card
-            imagen={Torta}
-            titulo="Torta"
-            descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus ligula nibh. Vestibulum maximus leo eu diam imperdiet, at congue justo lobortis. Ut elementum leo maximus, lacinia lectus venenatis, ornare ante. Aliquam erat volutpat. Mauris maximus nibh ac eros eleifend blandit a ac diam."
-
-            agregarAlCarrito={agregarAlCarrito}
-        />
-        <Footer />
-    </>
-    )
+                    <Card
+                        imagen={Torta}
+                        titulo="Torta"
+                        descripcion="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus ligula nibh. Vestibulum maximus leo eu diam imperdiet, at congue justo lobortis. Ut elementum leo maximus, lacinia lectus venenatis, ornare ante. Aliquam erat volutpat. Mauris maximus nibh ac eros eleifend blandit a ac diam."
+                        agregarAlCarrito={agregarAlCarrito}
+                    />
+                </div>
+            </div>
+            <Footer />
+        </>
+    );
 }
 
 export default Menu
