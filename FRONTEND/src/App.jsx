@@ -8,6 +8,7 @@ import Carrito from "./pages/Carrit";
 import Cuenta from "./pages/Cuenta"
 import Nosotros from "./pages/nosotros"
 import Personalizacion from "./pages/personalizacion";
+import Personalizaci from "./pages/personalizaci";
 import Configuracion from "./pages/Configuracion";
 import Pedidos from "./pages/pedidos"
 
@@ -22,6 +23,8 @@ function App() {
       <Route path="/cuenta" element={<Cuenta/>} />
       <Route path="/nosotros" element={<Nosotros/>}/>
       <Route path="/personalizacion" element={<Personalizacion/>}/>
+      <Route path="/personalizaci" element={<Personalizaci/>}/>
+      <Route path="/personalizar" element={<Personalizaci/>}/>
       <Route path="/configuracion" element={<Configuracion/>}/>
       <Route path="/pedidos" element={<Pedidos/>}/>
     </Routes>
